@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>JoyStick Junction</title>
+</head>
+
+<body>
+    <div class="containerCategory">
+        <div class="containerCategoryGradient">
+
+            <div class="navbar_for_category">
+                <div class="containerNav">
+                    <button class="toggle-button" id="logo" onclick="toggleElement()"></button>
+
+                    <div class="toggle-element" id="toggleElement">
+                        <a href="javascript:void(0);" class="contentExit" onclick="closeToggleElement()">X</a>
+                        <a class="contentToggle" href="index.html">Home</a>
+                        <a class="contentToggle" href="login.html">Login</a>
+                    </div>
+                    <form id="search_form" method="post">
+                        <div class="searchdropdown">
+                            <div class="searchBar">
+                                <input type="text" id="search_here" placeholder="Search..." name="search" />
+                            </div>
+                            <div class="suggestionbox" id="box">
+                                <!-- Suggestions will appear here -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="forProduct">
+                <div class="leftSide">
+                    <button class="ctoggle-button" id="filter" onclick="toggleElementc()"></button>
+
+                    <div class="ctoggle-element" id="toggleElementc">
+                        <a href="javascript:void(0);" class="contentExitc" onclick="closeToggleElementc()">X</a>
+                        <a class="contentTogglec" href="#" onclick="filterByCategory(1)">Adventure</a>
+                        <a class="contentTogglec" href="#" onclick="filterByCategory(2)">Sports</a>
+                        <a class="contentTogglec" href="#" onclick="filterByCategory(3)">Battle Royal</a>
+                        <a class="contentTogglec" href="#" onclick="filterByCategory(4)">Racing</a>
+                        <a class="contentTogglec" href="#" onclick="filterByCategory(5)">Shooting</a>
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <div class="containerProduct" id="productContainer">
+                        <!-- Product Cards Start Here -->
+                        <a href="#" data-category="1">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="blackmyth.avif" alt="Adventure Game 1" />
+                                </div>
+                                <div class="titleDiv">Adventure Game 1</div>
+                                <div class="desDiv">Description for Adventure Game 1</div>
+                                <div class="sellingPrice">₹ 1000</div>
+                                <div class="productPrice"><strike>₹ 1200</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="2">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="fc25.webp" alt="Sports Game 1" />
+                                </div>
+                                <div class="titleDiv">Sports Game 1</div>
+                                <div class="desDiv">Description for Sports Game 1</div>
+                                <div class="sellingPrice">₹ 1500</div>
+                                <div class="productPrice"><strike>₹ 1800</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="3">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="coc.jpg" alt="Battle Royal Game 1" />
+                                </div>
+                                <div class="titleDiv">Battle Royal Game 1</div>
+                                <div class="desDiv">Description for Battle Royal Game 1</div>
+                                <div class="sellingPrice">₹ 2000</div>
+                                <div class="productPrice"><strike>₹ 2300</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="4">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="nfs.avif" alt="Racing Game 1" />
+                                </div>
+                                <div class="titleDiv">Racing Game 1</div>
+                                <div class="desDiv">Description for Racing Game 1</div>
+                                <div class="sellingPrice">₹ 2500</div>
+                                <div class="productPrice"><strike>₹ 2800</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="5">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="valorant.jpeg" alt="Shooting Game 1" />
+                                </div>
+                                <div class="titleDiv">Shooting Game 1</div>
+                                <div class="desDiv">Description for Shooting Game 1</div>
+                                <div class="sellingPrice">₹ 3000</div>
+                                <div class="productPrice"><strike>₹ 3500</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="1">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="horizon.jpeg" alt="Adventure Game 2" />
+                                </div>
+                                <div class="titleDiv">Adventure Game 2</div>
+                                <div class="desDiv">Description for Adventure Game 2</div>
+                                <div class="sellingPrice">₹ 3500</div>
+                                <div class="productPrice"><strike>₹ 4000</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="2">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="wwe.jpg" alt="Sports Game 2" />
+                                </div>
+                                <div class="titleDiv">Sports Game 2</div>
+                                <div class="desDiv">Description for Sports Game 2</div>
+                                <div class="sellingPrice">₹ 4000</div>
+                                <div class="productPrice"><strike>₹ 4500</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="3">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="fortnite.jpeg" alt="Battle Royal Game 2" />
+                                </div>
+                                <div class="titleDiv">Battle Royal Game 2</div>
+                                <div class="desDiv">Description for Battle Royal Game 2</div>
+                                <div class="sellingPrice">₹ 4500</div>
+                                <div class="productPrice"><strike>₹ 5000</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="4">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="forza.jpg" alt="Racing Game 2" />
+                                </div>
+                                <div class="titleDiv">Racing Game 2</div>
+                                <div class="desDiv">Description for Racing Game 2</div>
+                                <div class="sellingPrice">₹ 5000</div>
+                                <div class="productPrice"><strike>₹ 5500</strike></div>
+                            </div>
+                        </a>
+                        <a href="#" data-category="5">
+                            <div class="GridGroup">
+                                <div class="imgDiv">
+                                    <img src="cod.avif" alt="Shooting Game 2" />
+                                </div>
+                                <div class="titleDiv">Shooting Game 2</div>
+                                <div class="desDiv">Description for Shooting Game 2</div>
+                                <div class="sellingPrice">₹ 5500</div>
+                                <div class="productPrice"><strike>₹ 6000</strike></div>
+                            </div>
+                        </a>
+                        <!-- Product Cards End Here -->
+                    </div>
+                    <div class="prevNext">
+                        <button class="prev">Prev</button>
+                        <button class="next">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space2">
+        <h1 class="qoute2">About Us</h1>
+    </div>
+    <div class="contactdetails">
+        <div class="address">
+            No.6,<br>
+            Dubai Kuruku Sandhu,<br>
+            Dubai Main Road,<br>
+            Dubai.
+        </div>
+        <div class="contact">
+            Email : tokiyo@gmail.com <br>
+            Contact : (91) +9677271039
+        </div>
+    </div>
+    <div class="space3">
+        <div class="qoute3">© 2023, Tokiyo. </div>
+    </div>
+</body>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap");
+
+    body {
+        font-family: "Comic Neue", cursive;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .containerCategory {
+        background-image: url("backgroundwallpaper.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .containerCategoryGradient {
+        margin: 0;
+        background-color: rgb(3, 16, 19, 0.5);
+    }
+
+    .displayCategory {
+        margin: 1%;
+        color: aliceblue;
+        text-align: center;
+        height: 75px;
+    }
+
+    .categoryTitle {
+        margin: auto;
+        padding: 1%;
+        border-radius: 10px;
+        font-size: xx-large;
+        font-weight: bolder;
+        background-color: rgb(3, 16, 19, 1);
+    }
+
+    /* for both left and right */
+    .forProduct {
+        min-height: 100px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* left side*/
+    .leftSide {
+        position: fixed;
+        top: 190px;
+        z-index: 3;
+        margin-left: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        color: aliceblue;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        transition: 0.3s ease;
+    }
+
+    .leftSide:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    #filter {
+        margin-left: 0;
+        background-image: url("filterWhite.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50px;
+        width: 50px;
+        transition: 0.3s ease;
+    }
+
+    #filter:hover {
+        background-image: url("filterRed.png");
+    }
+
+    .ctoggle-button {
+        background-image: url("logoWhite.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 10%;
+    }
+
+    .ctoggle-element {
+        border-radius: 35px;
+        z-index: 2;
+        position: fixed;
+        backdrop-filter: blur(5px);
+        top: 0;
+        left: -220px;
+        width: 200px;
+        height: 320px;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(5px);
+        overflow: hidden;
+        transition: left 0.3s ease;
+    }
+
+    .ctoggle-element.show {
+        left: 0;
+    }
+
+    .contentTogglec,
+    .contentExitc {
+        color: black;
+        font-size: large;
+        font-weight: 600;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .contentExitc {
+        border-radius: 25px;
+    }
+
+    .contentTogglec:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: aliceblue;
+        border-radius: none;
+    }
+
+    .contentExitc:hover {
+        background-color: rgba(255, 0, 0);
+        color: aliceblue;
+    }
+
+    .ctoggle-element.show .contentTogglec,
+    .ctoggle-element.show .contentExitc {
+        opacity: 1;
+    }
+
+    .contentExitc {
+        font-size: x-large;
+        background-color: white;
+        width: 50px;
+        margin: 5% auto;
+    }
+
+    /* right side*/
+    .rightSide {
+        margin-left: 20%;
+        background-color: transparent;
+        color: aliceblue;
+        width: 80%;
+    }
+
+    .GridGroup {
+        display: inline-block;
+        margin: 1%;
+        width: 260px;
+        height: 510px;
+        background-color: rgba(30, 30, 30, 0.7);
+        backdrop-filter: blur(5px);
+        padding: 1%;
+        border-radius: 5px;
+    }
+
+    .imgDiv {
+        display: flex;
+        margin: auto;
+        margin-top: 3%;
+        height: 350px;
+        width: 240px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: 0.3s;
+        transition-timing-function: ease;
+    }
+
+    img:hover {
+        transform: scale(0.95);
+    }
+
+    .titleDiv {
+        height: 24px;
+        overflow: hidden;
+        color: aliceblue;
+        margin-top: 5%;
+        text-align: center;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    .titleDiv:hover {
+        height: 24px;
+        overflow: hidden;
+        cursor: pointer;
+        color: red;
+        margin-top: 5%;
+        text-align: center;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    .desDiv {
+        padding: 5% 1% 1% 1%;
+        height: 60px;
+        color: aliceblue;
+        font-size: small;
+        overflow: hidden;
+    }
+
+    .sellingPrice {
+        overflow: hidden;
+        margin-top: 5%;
+        cursor: pointer;
+        color: aliceblue;
+        font-size: large;
+        float: left;
+        margin-left: 5%;
+        font-weight: bold;
+        transition-duration: 0.8s;
+    }
+
+    .sellingPrice:hover {
+        color: red;
+        font-size: larger;
+    }
+
+    .productPrice {
+        margin-top: 5%;
+        width: 100px;
+        color: red;
+        float: right;
+        font-weight: bold;
+    }
+
+    .prevNext {
+        text-align: center;
+        height: 100px;
+    }
+
+    .prev,
+    .next {
+        margin: 3% 1% 0% 1%;
+        padding: 1% 3% 1% 3%;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+        border: 0;
+        background-color: rgb(3, 16, 19, 1);
+        color: aliceblue;
+        transition-delay: 0.1s;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+
+    .prev:hover,
+    .next:hover {
+        transform: translateY(-2px);
+        font-weight: bold;
+        font-size: larger;
+        border: 0;
+        text-decoration: none;
+        color: red;
+    }
+
+    .noproductFound {
+        float: right;
+        margin-right: 40%;
+        color: aliceblue;
+        font-weight: bold;
+        text-align: center;
+        padding: 2% 5% 2% 5%;
+        background-color: rgba(3, 16, 19, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+    /*------*/
+
+    @media (max-width: 768px) {
+        * {
+            font-size: medium;
+        }
+
+        .leftSide {
+            height: 50px;
+            width: 50px;
+        }
+
+        #filter {
+            height: 30px;
+            width: 30px;
+        }
+
+        .ctoggle-element {
+            border-radius: 25px;
+        }
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap");
+
+    * {
+        box-sizing: border-box;
+        font-family: "Rubik", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .containerNav {
+        background-color: rgb(0, 0, 0);
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+
+    .toggle-button {
+        background-image: url("logo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 10%;
+    }
+
+    .toggle-element {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(5px);
+        overflow: hidden;
+        transition: left 0.3s ease;
+    }
+
+    .toggle-element.show {
+        left: 0;
+    }
+
+    .contentToggle,
+    .contentExit {
+        color: black;
+        font-size: large;
+        font-weight: 600;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .contentExit {
+        border-radius: 25px;
+    }
+
+    .contentToggle:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: aliceblue;
+        border-radius: none;
+    }
+
+    .contentExit:hover {
+        background-color: rgba(255, 0, 0);
+        color: aliceblue;
+    }
+
+    .toggle-element.show .contentToggle,
+    .toggle-element.show .contentExit {
+        opacity: 1;
+    }
+
+    .contentExit {
+        font-size: x-large;
+        background-color: white;
+        width: 50px;
+        margin: 5% auto;
+    }
+
+    #search_form {
+        margin-right: 10%;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .searchdropdown {
+        width: 100%;
+    }
+
+    .searchBar {
+        width: 100%;
+    }
+
+    input {
+        padding: 10px 45px 10px 30px;
+        width: 100%;
+        max-width: 445px;
+        height: 50px;
+        border: 0;
+        border-radius: 25px;
+        font-size: medium;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .suggestionbox {
+        background-color: rgba(240, 248, 255, 0.5);
+        border-radius: 20px;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        max-width: 445px;
+    }
+
+    .suggestion {
+        border-radius: 20px;
+        text-decoration: none;
+        color: rgb(3, 16, 19);
+        width: 100%;
+        padding: 2%;
+        display: block;
+        background-color: rgba(240, 248, 255, 0.6);
+        border-bottom: 2px solid aliceblue;
+    }
+
+    .suggestion:hover {
+        color: red;
+        background-color: rgba(3, 16, 19, 0.7);
+    }
+
+    .no-results {
+        border-radius: 20px;
+        text-decoration: none;
+        color: rgb(3, 16, 19);
+        width: 100%;
+        padding: 2%;
+        display: block;
+        background-color: rgba(240, 248, 255, 0.6);
+        border-bottom: 2px solid aliceblue;
+    }
+
+    #cart {
+        color: red;
+    }
+
+    /* Media Queries */
+    @media (max-width: 1200px) {
+        #search_form {
+            width: 60%;
+            margin-right: 10%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .containerNav {
+            height: 70px;
+        }
+
+        #search_form {
+            width: 70%;
+        }
+
+        .toggle-button {
+            margin-left: 1%;
+        }
+
+        .suggestionbox {
+            width: 60%;
+        }
+
+        .suggestion {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .toggle-button {
+            width: 50px;
+            height: 50px;
+        }
+
+        .contentToggle,
+        .contentExit {
+            font-size: medium;
+        }
+
+        input {
+            width: calc(100% - 20px);
+        }
+
+        .suggestion,
+        .no-results {
+            width: calc(100% - 20px);
+        }
+    }
+
+    /* footer */
+    body {
+        font-family: 'Comic Neue', cursive;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .space2 {
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 0;
+    }
+
+    .qoute2 {
+        color: aliceblue;
+    }
+
+    .contactdetails {
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 5%;
+    }
+
+    .address {
+        color: aliceblue;
+        background-color: rgb(0, 0, 0);
+        padding: 1%;
+        margin: 1%;
+    }
+
+    .contact {
+        color: aliceblue;
+        background-color: rgb(0, 0, 0);
+        padding: 1%;
+        margin: 1%;
+    }
+
+    .space3 {
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 0;
+    }
+
+    .qoute3 {
+        color: aliceblue;
+    }
+
+    /* -----------scroll bar hide--------------- */
+
+    /* For Webkit browsers (Chrome, Safari, etc.) */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For other browsers */
+    body {
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+    }
+</style>
+<script>
+    const cards = document.querySelectorAll(".GridGroup");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const prevNextContainer = document.querySelector(".prevNext");
+
+    const cardsPerPage = 9;
+    let currentPage = 1;
+
+    function showPage(page) {
+        const startIndex = (page - 1) * cardsPerPage;
+        const endIndex = startIndex + cardsPerPage;
+
+        cards.forEach((card, index) => {
+            if (index >= startIndex && index < endIndex) {
+                card.style.display = "inline-block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        prev.style.display = currentPage > 1 ? "inline-block" : "none";
+        next.style.display =
+            currentPage < Math.ceil(cards.length / cardsPerPage)
+                ? "inline-block"
+                : "none";
+    }
+
+    if (cards.length <= cardsPerPage) {
+        prevNextContainer.style.display = "none";
+    }
+
+    showPage(currentPage);
+
+    prev.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    });
+
+    next.addEventListener("click", () => {
+        const totalPages = Math.ceil(cards.length / cardsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    });
+
+    function toggleElementc() {
+        var element = document.getElementById("toggleElementc");
+        element.classList.toggle("show");
+    }
+
+    function closeToggleElementc() {
+        var element = document.getElementById("toggleElementc");
+        element.classList.remove("show");
+    }
+
+    document.addEventListener("click", function (event) {
+        var isClickInside =
+            document.getElementById("filter").contains(event.target) ||
+            document.getElementById("toggleElementc").contains(event.target);
+
+        if (!isClickInside) {
+            closeToggleElementc();
+        }
+    });
+
+    function filterByCategory(category) {
+        const productContainer = document.getElementById('productContainer');
+        const products = productContainer.querySelectorAll('[data-category]');
+        products.forEach(product => {
+            if (product.getAttribute('data-category') == category) {
+                product.style.display = 'inline-block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+        currentPage = 1;
+        showPage(currentPage);
+    }
+
+    const input = document.getElementById("search_here");
+    const box = document.getElementById("box");
+    input.addEventListener("input", (e) => {
+        box.innerHTML = "";
+        const inputValue = e.target.value.toLowerCase();
+        const filteredProducts = Array.from(cards).filter(product =>
+            product.querySelector('.titleDiv').textContent.toLowerCase().includes(inputValue)
+        );
+        if (filteredProducts.length > 0) {
+            filteredProducts.forEach((product) => {
+                const suggestionLink = document.createElement("a");
+                suggestionLink.className = "suggestion";
+                suggestionLink.href = "#";
+                suggestionLink.textContent = product.querySelector('.titleDiv').textContent;
+                box.appendChild(suggestionLink);
+            });
+        } else {
+            box.innerHTML = "<b class='no-results'>No Results found...</b>";
+        }
+    });
+
+    function toggleElement() {
+        var element = document.getElementById("toggleElement");
+        element.classList.toggle("show");
+    }
+
+    function closeToggleElement() {
+        var element = document.getElementById("toggleElement");
+        element.classList.remove("show");
+    }
+</script>
+
+</html>
